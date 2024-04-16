@@ -1,4 +1,54 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
-<h1>fisting anal</h1>
+<div class="container mt-5">
+    <div data-bs-theme="light" class="p-4 text-body bg-body borders" style="width: 1130px; height: 735px;">
+    <div class="row g-5">
+      <form action="" method="post" enctype="multipart/form-data">
+
+         {% csrf_token %}
+           <div class="row mt-3" style="margin: 110px;">
+             <h1>Выбор стиля</h1>
+             
+             <div class="row mt-3 label">
+                {{ form.number_of_images.label }}
+             </div>
+             <div class="row mt-1 col-6">
+                {{ form.number_of_images }}
+             </div>
+
+             <div class="row mt-3 label">
+                {{ form.style.label }}
+             </div>
+             <div class="row mt-1 col-6">
+                {{ form.style }}
+             </div>
+
+             <div class="row mt-3 label">
+                {{ form.format.label }}
+             </div>
+             <div class="row mt-1 col-6">
+                {{ form.format }}
+             </div>
+
+             <div class="row mt-3 label">
+                {{ form.quality.label}}
+             </div>
+             <div class="row mt-1 col-6">
+                {{ form.quality }}
+             </div>
+
+           </div>
+
+          <hr align="center" class="my-4" method="post">
+          <input class="w-100 btn btn-success btn-lg"
+                  type="submit"
+                  style="--bs-btn-padding-y: 10px; --bs-btn-padding-x: 10px; --bs-btn-font-size: 17px;" 
+                  value="Перейти к сюжету">
+        </form>
+    </div>
+
+    </div>
+</div>
+</html>
 {% endblock %}
