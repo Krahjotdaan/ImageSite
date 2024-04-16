@@ -2,20 +2,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container mt-5">
-    <div data-bs-theme="light" class="p-4 text-body bg-body borders" style="width: 1130px; height: 735px;">
+    <div data-bs-theme="light" class="p-4 text-body bg-body borders" style="width: 1130px; height: 590px;">
     <div class="row g-5">
       <form action="" method="post" enctype="multipart/form-data">
 
          {% csrf_token %}
            <div class="row mt-3" style="margin: 110px;">
              <h1>Выбор стиля</h1>
-             
-             <div class="row mt-3 label">
-                {{ form.number_of_images.label }}
-             </div>
-             <div class="row mt-1 col-6">
-                {{ form.number_of_images }}
-             </div>
 
              <div class="row mt-3 label">
                 {{ form.style.label }}
@@ -25,10 +18,10 @@
              </div>
 
              <div class="row mt-3 label">
-                {{ form.format.label }}
+                {{ form.frm.label }}
              </div>
              <div class="row mt-1 col-6">
-                {{ form.format }}
+                {{ form.frm }}
              </div>
 
              <div class="row mt-3 label">
@@ -44,7 +37,7 @@
           <input class="w-100 btn btn-success btn-lg"
                   type="submit"
                   style="--bs-btn-padding-y: 10px; --bs-btn-padding-x: 10px; --bs-btn-font-size: 17px;" 
-                  value="Перейти к сюжету">
+                  value="Сохранить параметры">
         </form>
     </div>
 
