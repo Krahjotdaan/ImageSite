@@ -50,8 +50,8 @@ def characters(request):
     
 
 def generation(request):
-    yandex_cloud_catalog = "b1glihj9h7pkj7mnd6at"
-    yandex_api_key = "AQVNyJRotHlHIhGec5YfWrslmo8tsbsc8eatOf_V"
+    yandex_cloud_catalog = ""
+    yandex_api_key = ""
         
     temperature = 0.3
     seed = int(round(datetime.datetime.now().timestamp()))
